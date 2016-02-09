@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# EasyTether script to connect in two steps.
+# This script is step 2, which refreshes the WiFi.
+#
+# ## Offline mode
+#
+# If you're using any application that has "offline" capabilities,
+# you'll want to change from "offline" to "online" when you connect.
+#
+# For example, the Firefox web browser has "offline mode".
+# To switch between offline and online, choose "File > offline mode".
+#
+# ## About
+#
+#   * Program: easytether-connect-finish
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+#   * Created: 2010-11-04
+#   * Updated: 2016-02-90
+#   * License: GPL
+##
+set -euf
+sudo dhclient easytether0 "$@"
